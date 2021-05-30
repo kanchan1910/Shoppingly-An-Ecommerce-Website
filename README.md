@@ -68,6 +68,35 @@
 ![9](https://user-images.githubusercontent.com/48528522/120102956-02f1e200-c16b-11eb-93b0-694346e12df4.png)
 
 
+**Login**
+
+![10](https://user-images.githubusercontent.com/48528522/120103334-c2936380-c16c-11eb-8fe0-a5397d5a71a6.png)
+
+**Shipping Details**
+
+![18](https://user-images.githubusercontent.com/48528522/120103350-ce7f2580-c16c-11eb-896d-3145cb196f81.png)
+
+**Product Details**
+
+![19](https://user-images.githubusercontent.com/48528522/120103360-d9d25100-c16c-11eb-944f-ffbdb7608965.png)
+
+**Empty Shopping Cart**
+
+![24](https://user-images.githubusercontent.com/48528522/120103368-e656a980-c16c-11eb-88f5-6c4684814e76.png)
+
+
+**Shopping Cart**
+
+![20](https://user-images.githubusercontent.com/48528522/120103377-f40c2f00-c16c-11eb-8fe0-748f7327b698.png)
+
+**Wish List**
+
+![21](https://user-images.githubusercontent.com/48528522/120103384-fcfd0080-c16c-11eb-9259-aef3d85fa19c.png)
+
+
+
+
+
 
 
 
