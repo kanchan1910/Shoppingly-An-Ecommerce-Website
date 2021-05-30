@@ -46,6 +46,8 @@
 `python manage.py runserver`
 
 
+![21](https://user-images.githubusercontent.com/48528522/120102451-b2798500-c168-11eb-8243-b8ec860500f1.png)
+
 
 
 
