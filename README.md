@@ -93,6 +93,43 @@
 
 ![21](https://user-images.githubusercontent.com/48528522/120103384-fcfd0080-c16c-11eb-9259-aef3d85fa19c.png)
 
+**Order Summary**
+
+![22](https://user-images.githubusercontent.com/48528522/120103403-156d1b00-c16d-11eb-8da3-b7edd1a841d8.png)
+
+**Order placement page**
+
+![23](https://user-images.githubusercontent.com/48528522/120103446-42b9c900-c16d-11eb-82f4-35f94833c169.png)
+
+**Mobile products fiteration**
+
+![13](https://user-images.githubusercontent.com/48528522/120103472-59f8b680-c16d-11eb-854c-af1443789f1a.png)
+
+
+**Top wears products fiteration**
+
+![15](https://user-images.githubusercontent.com/48528522/120103493-798fdf00-c16d-11eb-927b-4a503915ad82.png)
+
+
+**Bottom wears products fiteration**
+
+![16](https://user-images.githubusercontent.com/48528522/120103506-84e30a80-c16d-11eb-8b24-1997e1ec1f9a.png)
+
+
+**Laptop products fiteration**
+
+![14](https://user-images.githubusercontent.com/48528522/120103522-a512c980-c16d-11eb-86c0-78e0333932af.png)
+
+**Foot wears products fiteration**
+
+![17](https://user-images.githubusercontent.com/48528522/120103530-a9d77d80-c16d-11eb-82c7-869c8284cd10.png)
+
+
+**Password Reset Feature**
+
+![11](https://user-images.githubusercontent.com/48528522/120103538-b65bd600-c16d-11eb-8534-8b7d3e038650.png)
+
+![12](https://user-images.githubusercontent.com/48528522/120103542-b9ef5d00-c16d-11eb-9af7-b3d93721c9d1.png)
 
 
 
