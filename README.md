@@ -1,13 +1,14 @@
 # **SHOPPINGLY - An Ecommerce Website**
 
-**Tech Stack** 
+# **Tech Stacks**
 - Django, Ajax, Jquery, Bootstrap, Javascript, Python, Owl Carousel, HTML, CSS, MYSQL
 
 
-**Project Summary**
+# **Project Summary**
 - The website displays products. Users can add and remove products to/from their cart while also specifying the quantity of each item. They can then enter their address and choose Stripe to handle the payment processing.
 
-**Features of the Website** 
+
+# **Features of the Website** 
 - Customer Registration
 - Login
 - Password Reset
@@ -22,7 +23,8 @@
 - Order summary
 - Paypal Payment Gateway (Optional)
 
-**Running this project**
+
+# **Running this project**
 - To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately. You can install virtualenv with
 
 `pip install virtualenv`
