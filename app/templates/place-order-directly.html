@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block content %}
+
+<div class="container">
+ <div class="row mt-5">
+  <div class="col-sm-6">
+    <h4>Order Summary</h4>
+    <hr>
+
+      <div class="card mb-2">
+        <div class="card-body">
+          <h5>Product: {{product.title}}</h5>
+          <p>Quantity:1</p>
+          <p class="fw-bold"> </p>
+        </div>
+      </div>
+
+	   <p class="fw-bold">Price: Total Amount ({{amount}}) + 50.0 = {{total}} </p>
+    <small>Terms and Conditions: Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ullam saepe! Iure optio repellat dolor velit, minus rem. Facilis cumque neque numquam laboriosam, accusantium adipisci nisi nihil in et quis?</small>
+  </div>
+  <div class="col-sm-4 offset-sm-1">
+    <h4>Select Shipping Address</h4>
+    <hr>
+    <form action="{% url 'paymentdonedirectly'%}">
+		{% for a in add %}
+      <div class="card">
+        <div class="card-body">
+        <h5>{{a.name}}</h5>
+        <p>{{a.locality}}, {{a.city}} {{a.state}} - {{a.zipcode}}</p>
+        </div>
+      </div>
+        <div class="form-check mt-2 mb-5">
+			
+          <input class="form-check-input" type="radio" name="cusid" id="cusid{{forloop.counter}}" value="{{a.id}}" required>
+          <label class="form-check-label fw-bold" for="">
+            Address: {{forloop.counter}} </label>
+        </div>
+		{% endfor %}
+		
+        <div class="text-end">
+			 <input type="hidden" name="prod_id" value="{{product.id}}" id="prod_id2">
+          <button type="submit" class="btn btn-warning mt-3 px-5 fw-bold">Continue</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

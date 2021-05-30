@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Cart{% endblock title %}
+{% block content %}
+<div class="container my-3">
+ <div class="row">
+  <h1 class="text-center mb-3">My Wish List</h1>
+  <div class="col-sm-8">
+  <div class="card">
+   <div class="card-body">
+    <h3>Wish List</h3>
+	   {% for wish in wishes %}
+	   <hr><hr>
+    <div class="row">
+     <div class="col-sm-12 text-center align-self-center"><img src="{{wish.product.product_image.url}}" alt="" srcset="" class="img-fluid img-thumbnail shadow-sm" height="150" width="150"> </div>
+     <div class="col-sm-12">
+      <div>
+       <h5>{{wish.product.title}}</h5>
+       <p class="mb-2 text-muted small">{{wish.product.description}}</p>
+       <div class="d-flex justify-content-between">
+        <a href="#" class="btn btn-sm btn-secondary mr-3 remove-wish"  pid ="{{wish.product.id}}">Remove item </a>
+        <p class="mb-0"><span><strong>{{cart.product.discounted_price}}</strong></span></p>
+       </div>
+      </div>
+     </div>
+    </div>
+	   {% endfor %}
+    <hr class="text-muted">
+
+   </div>
+   </div>
+  </div>
+
+  
+ </div>
+</div>
+<div class="container">
+ <div class="row">
+  <div class="col-sm-8">
+   <div class="card">
+    <div class="card-body">
+      <h5 class="mb-4">We accept</h5>
+      <img src="{% static 'app/images/payment.png' %}" alt="" class="img-fluid">
+    </div>
+  </div>
+  </div>
+ </div>
+</div>
+{% endblock content %}

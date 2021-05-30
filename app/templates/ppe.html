@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Mobiles Section{% endblock title %}
+{% block content %}
+<div class="container my-5">
+ <div class="row">
+  <div class="col-sm-3">
+   <div class="list-group">
+	   <a href="{% url 'foot' %}" class="list-group-item list-group-item-action" aria-current="true"> All Footwears
+	   </a>
+	   
+	   <a href="{% url 'footdata' 'Shoes' %}" class="list-group-item list-group-item-action" aria-current="true"> Shoes
+	   </a>
+	   
+	   <a href="{% url 'footdata' 'Bellies' %}" class="list-group-item list-group-item-action" aria-current="true"> Bellies
+	   </a>
+	   
+	   <a href="{% url 'footdata' 'Sandles' %}" class="list-group-item list-group-item-action" aria-current="true"> Sandles
+	   </a>
+	   
+	   <a href="{% url 'footdata' 'Sleepers' %}" class="list-group-item list-group-item-action" aria-current="true"> Sleepers
+	   </a>
+	   	   <a href="{% url 'footdata' 'below' %}" class="list-group-item list-group-item-action" aria-current="true"> Below 350
+	   </a>
+	   	   <a href="{% url 'footdata' 'above' %}" class="list-group-item list-group-item-action" aria-current="true"> Above 350
+	   </a>
+   </div>
+  </div>
+	 
+  <div class="col-sm-8">
+<div class="row">
+	
+	 {% for f in foots %}
+<div class="col-sm-8 text-center mb-4">
+	<a href="{% url 'productdetail' f.id %}" class="btn">
+		<div class="item">
+			<img src="{{f.product_image.url}}" alt="" height="330" class="">
+			<div class="fw-bold">
+				{{f.title}}
+			</div>
+			<div class="fw-bold">
+				Rs. {{f.discounted_price}}
+			</div>
+			<small class="fw-light text-decoration-line-through">
+				{{f.selling_price}}
+			</small>
+		</div>
+	</a>
+</div>
+
+	 {% endfor %}
+</div>
+  </div>
+ </div>
+</div>
+{% endblock content %}

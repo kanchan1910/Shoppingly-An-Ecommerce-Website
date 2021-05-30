@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block banner_slider %}
+
+<style>
+	.hovereffect {
+width:100%;
+height:100%;
+float:left;
+overflow:hidden;
+position:relative;
+text-align:center;
+cursor:default;
+}
+
+.hovereffect .overlay {
+width:100%;
+height:100%;
+position:absolute;
+overflow:hidden;
+top:0;
+left:0;
+opacity:0;
+background-color:rgba(0,0,0,0.5);
+-webkit-transition:all .4s ease-in-out;
+transition:all .4s ease-in-out
+}
+
+.hovereffect img {
+display:block;
+position:relative;
+-webkit-transition:all .4s linear;
+transition:all .4s linear;
+}
+
+.hovereffect h2 {
+text-transform:uppercase;
+color:#fff;
+text-align:center;
+position:relative;
+font-size:17px;
+background:rgba(0,0,0,0.6);
+-webkit-transform:translatey(-100px);
+-ms-transform:translatey(-100px);
+transform:translatey(-100px);
+-webkit-transition:all .2s ease-in-out;
+transition:all .2s ease-in-out;
+padding:10px;
+}
+
+.hovereffect a.info {
+text-decoration:none;
+display:inline-block;
+text-transform:uppercase;
+color:#fff;
+border:1px solid #fff;
+background-color:transparent;
+opacity:0;
+filter:alpha(opacity=0);
+-webkit-transition:all .2s ease-in-out;
+transition:all .2s ease-in-out;
+margin:50px 0 0;
+padding:7px 14px;
+}
+
+.hovereffect a.info:hover {
+box-shadow:0 0 5px #fff;
+}
+
+.hovereffect:hover img {
+-ms-transform:scale(1.2);
+-webkit-transform:scale(1.2);
+transform:scale(1.2);
+}
+
+.hovereffect:hover .overlay {
+opacity:1;
+filter:alpha(opacity=100);
+}
+
+.hovereffect:hover h2,.hovereffect:hover a.info {
+opacity:1;
+filter:alpha(opacity=100);
+-ms-transform:translatey(0);
+-webkit-transform:translatey(0);
+transform:translatey(0);
+}
+
+.hovereffect:hover a.info {
+-webkit-transition-delay:.2s;
+transition-delay:.2s;
+}
+</style>
+<!--Banner Slider-->
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static  'app/images/banner/b0.png'  %}" class="d-block w-100" height="830px" alt="...">
+    </div>
+
+  </div>
+</div>
+
+
+<!-- End Banner Slider -->
+{% endblock banner_slider %}
+
+
+{% block content %}
+
+<div class="m-3">
+	<div class="text-center">
+	<h2><b>Shoppingly Deals Of The Day</b></h2>
+		</div>
+ <!-- Slider 1 -->
+ <div class="owl-carousel" id="slider1">
+	 {% for d in deals %}
+ <div class="hovereffect">
+	           <a href="{% url 'productdetail' d.id %}" class="btn"><div class="item">
+	  <img src={{d.product_image.url}} alt="" height="350px"><span class="fw-bold"></span><br><span class="fs-5">Rs. {{d.discounted_price}}</span></div>
+   
+			   </a>
+
+    </div>
+  
+	 {% endfor %}
+ </div>
+</div>
+<!-- Payment Info Section -->
+<div class="container my-5">
+ <div class="row">
+  <div class="col-sm-3">
+   <div class="card mb-3">
+     <div class="card-body">
+     <img src="{% static 'app/images/payavail/cc.jpg' %}" alt="" srcset="" class="img-fluid">
+     </div>
+   </div>
+  </div>
+  <div class="col-sm-3">
+   <div class="card mb-3">
+     <div class="card-body">
+      <img src="{% static 'app/images/payavail/upi.jpg' %}" alt="" srcset="" class="img-fluid">
+     </div>
+   </div>
+  </div>
+  <div class="col-sm-3">
+   <div class="card mb-3">
+     <div class="card-body">
+      <img src="{% static 'app/images/payavail/nb.jpg' %}" alt="" srcset="" class="img-fluid">
+     </div>
+   </div>
+  </div>
+  <div class="col-sm-3">
+   <div class="card mb-3">
+     <div class="card-body">
+      <img src="{% static 'app/images/payavail/bj.jpg' %}" alt="" srcset="" class="img-fluid">
+     </div>
+   </div>
+  </div>
+ </div>
+</div>
+<!-- End Payment Info Section -->
+
+
+<div class="m-3">
+	<div class="text-center">
+	<h2><b>Shoppingly Top Wears</b></h2>
+		</div>
+ <!-- Slider 1 -->
+ <div class="owl-carousel" id="slider2">
+	 {% for t in topwears %}
+
+ <div class="hovereffect">
+	           <a href="{% url 'productdetail' t.id %}" class="btn"><div class="item">
+	  <img src={{t.product_image.url}} alt="" height="350px"><span class="fw-bold"></span><br><span class="fs-5">Rs. {{t.discounted_price}}</span></div>
+    
+			   </a>
+
+    </div>
+  
+		
+	 {% endfor %}
+ </div>
+</div>
+
+<div class="m-3">
+	<div class="text-center">
+	<h2><b>Shoppingly Bottom Wears</b></h2>
+		</div>
+ <!-- Slider 1 -->
+ <div class="owl-carousel" id="slider3">
+	 {% for b in bottomwears %}
+ <div class="hovereffect">
+	           <a href="{% url 'productdetail' b.id %}" class="btn"><div class="item">
+	  <img src={{b.product_image.url}} alt="" height="350px"><span class="fw-bold"></span><br><span class="fs-5">Rs. {{b.discounted_price}}</span></div>
+			
+			   </a>
+
+    </div>
+  
+		 {% endfor %}
+ </div>
+</div>
+<div class="m-3">
+	<div class="text-center">
+	<h2><b>Shoppingly Foot Wears</b></h2>
+		</div>
+ <!-- Slider 1 -->
+ <div class="owl-carousel" id="slider4">
+	 {% for f in footwears %}
+	  <div class="hovereffect">
+	           <a href="{% url 'productdetail' f.id %}" class="btn"><div class="item">
+	  <img src={{f.product_image.url}} alt="" height="350px"><span class="fw-bold"></span><br><span class="fs-5">Rs. {{f.discounted_price}}</span></div>
+			   </a>
+
+    </div>
+  
+	 {% endfor %}
+ </div>
+</div>
+
+<div class="m-3">
+	<div class="text-center">
+	<h2><b>Shoppingly Mobiles</b></h2>
+		</div>
+ <!-- Slider 1 -->
+ <div class="owl-carousel" id="slider5">
+	 {% for m in mobiles %}
+ <div class="hovereffect">
+	           <a href="{% url 'productdetail' m.id %}" class="btn"><div class="item">
+	  <img src={{m.product_image.url}} alt="" height="350px"><span class="fw-bold"></span><br><span class="fs-5">Rs. {{m.discounted_price}}</span></div>
+
+  </a>
+
+    </div>
+  
+		 {% endfor %}
+ </div>
+</div>
+
+<div class="m-3">
+	<div class="text-center">
+	<h2><b>Shoppingly Laptops</b></h2>
+		</div>
+ <!-- Slider 1 -->
+ <div class="owl-carousel" id="slider6">
+	 {% for l in laptops %}
+	 <div class="hovereffect">
+	           <a href="{% url 'productdetail' l.id %}" class="btn"><div class="item">
+	  <img src={{l.product_image.url}} alt="" height="350px"><span class="fw-bold mb-2"></span><br><span class="fs-5">Rs. {{l.discounted_price}}</span></div>
+
+  </a>
+
+    </div>
+  
+	 {% endfor %}
+ </div>
+</div>
+
+<div class="m-3">
+	<div class="text-center">
+	<h2><b>Shoppingly Corona Care Products</b></h2>
+		</div>
+ <!-- Slider 1 -->
+ <div class="owl-carousel" id="slider7">
+	 {% for c in corona %}
+	 <div class="hovereffect">
+	           <a href="{% url 'productdetail' c.id %}" class="btn"><div class="item">
+	  <img src={{c.product_image.url}} alt="" height="350px"><span class="fw-bold mb-2"></span><br><span class="fs-5">Rs. {{c.discounted_price}}</span></div>
+
+  </a>
+
+    </div>
+  
+	 {% endfor %}
+ </div>
+</div>
+
+{% endblock content %}
+
+
+
