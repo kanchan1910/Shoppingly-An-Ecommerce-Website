@@ -111,6 +111,10 @@
 ![15](https://user-images.githubusercontent.com/48528522/120103493-798fdf00-c16d-11eb-927b-4a503915ad82.png)
 
 
+**Covid care products fiteration**
+
+![11](https://user-images.githubusercontent.com/48528522/120107442-a5679080-c17e-11eb-9fc2-89c367b50f34.png)
+
 **Bottom wears products fiteration**
 
 ![16](https://user-images.githubusercontent.com/48528522/120103506-84e30a80-c16d-11eb-8b24-1997e1ec1f9a.png)
